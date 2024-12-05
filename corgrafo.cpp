@@ -14,9 +14,9 @@ void coloracaoGulosa(int grafo[MAX_VERTICES][MAX_VERTICES], int numVertices) {
     
     bool disponivel[MAX_VERTICES];
     
-    // Colore
+
     for (int u = 1; u < numVertices; u++) {
-        // Reinicia
+        
         for (int i = 0; i < numVertices; i++) {
             disponivel[i] = true;
         }
@@ -59,5 +59,3 @@ int main() {
     coloracaoGulosa(grafo, numVertices);
     return 0;
 }
-
-
