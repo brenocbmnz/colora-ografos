@@ -7,21 +7,21 @@ void coloracaoGulosa(int grafo[MAX_VERTICES][MAX_VERTICES], int numVertices) {
     int resultado[MAX_VERTICES];
     resultado[0] = 0; // Primeiro vértice colorido com 0
 
-    // Inicializa outros vértices como não coloridos
+  
     for (int i = 1; i < numVertices; i++) {
         resultado[i] = -1;
     }
     
     bool disponivel[MAX_VERTICES];
     
-    // Colorir vértices restantes
+    // Colorir
     for (int u = 1; u < numVertices; u++) {
-        // Reiniciar cores disponíveis
+        // Reiniciar
         for (int i = 0; i < numVertices; i++) {
             disponivel[i] = true;
         }
         
-        // Marcar cores de vértices adjacentes como indisponíveis
+        // Marcar vértices adjacentes como indisponíveis
         for (int v = 0; v < numVertices; v++) {
             if (grafo[u][v] == 1 && resultado[v] != -1) {
                 disponivel[resultado[v]] = false;
